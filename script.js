@@ -1,8 +1,9 @@
 const solutionData = {
   school: {
     kicker: 'Schools & educational institutions',
-    image: 'assets/images/solution-school.png',
-    imageAlt: 'School uniforms illustration',
+    image: 'assets/images/school-campus.webp',
+    imageAlt: 'Students in coordinated school uniforms on a modern campus',
+    url: 'solutions/school-uniforms.html',
     title: 'Uniform programs that build belonging from day one.',
     lead: 'Joy Uniforms has built its reputation by serving educational institutions across Greater Noida and NCR. We support schools and professional colleges with coordinated uniforms that balance identity, comfort, durability and consistent sizing.',
     tags: ['Daily wear', 'Sports & winter', 'College uniforms'],
@@ -13,8 +14,9 @@ const solutionData = {
   },
   healthcare: {
     kicker: 'Hospitals, clinics & medical institutions',
-    image: 'assets/images/solution-healthcare.png',
-    imageAlt: 'Healthcare uniforms illustration',
+    image: 'assets/images/healthcare-team.webp',
+    imageAlt: 'Healthcare team in coordinated medical uniforms in a hospital corridor',
+    url: 'solutions/healthcare-uniforms.html',
     title: 'Healthcare uniforms designed to support long, demanding shifts.',
     lead: 'We develop role-appropriate uniforms for clinical, support and administrative teams, with emphasis on comfort, easy maintenance, professional appearance and dependable repeat supply.',
     tags: ['Comfort', 'Easy care', 'Role-wise identity'],
@@ -25,8 +27,9 @@ const solutionData = {
   },
   industrial: {
     kicker: 'Factories, plants & warehouses',
-    image: 'assets/images/solution-industrial.png',
-    imageAlt: 'Industrial workwear illustration',
+    image: 'assets/images/industrial-team.webp',
+    imageAlt: 'Industrial team in coordinated workwear on a factory floor',
+    url: 'solutions/industrial-workwear.html',
     title: 'Workwear that supports the people who keep operations moving.',
     lead: 'Industrial uniforms must work through long shifts, repeated use and practical job demands. We create durable, comfortable and consistent workwear aligned to role, environment and organizational identity.',
     tags: ['Durability', 'Utility', 'Consistency'],
@@ -37,8 +40,9 @@ const solutionData = {
   },
   corporate: {
     kicker: 'Corporate offices, retail & front-facing teams',
-    image: 'assets/images/solution-corporate.png',
-    imageAlt: 'Corporate and retail uniforms illustration',
+    image: 'assets/images/corporate-showroom-team.webp',
+    imageAlt: 'Corporate and retail team in smart coordinated uniforms',
+    url: 'solutions/corporate-retail-uniforms.html',
     title: 'A professional identity your employees can wear with confidence.',
     lead: 'Well-designed corporate uniforms help customers recognize your team and help employees feel part of a consistent brand. We balance a polished appearance with comfort for the working day.',
     tags: ['Brand-led', 'Smart fit', 'Coordinated'],
@@ -49,8 +53,9 @@ const solutionData = {
   },
   hospitality: {
     kicker: 'Hotels, restaurants & food service',
-    image: 'assets/images/solution-hospitality.png',
-    imageAlt: 'Hospitality uniforms illustration',
+    image: 'assets/images/hospitality-team.webp',
+    imageAlt: 'Hospitality staff in coordinated uniforms inside an elegant lobby',
+    url: 'solutions/hospitality-uniforms.html',
     title: 'Hospitality uniforms that look composed throughout the shift.',
     lead: 'Guest-facing teams need to look professional while remaining comfortable and mobile. We create coordinated role-wise uniforms that reflect the property’s character and service standards.',
     tags: ['Guest-facing', 'Role-wise', 'Easy movement'],
@@ -61,8 +66,9 @@ const solutionData = {
   },
   security: {
     kicker: 'Security services & facility management',
-    image: 'assets/images/solution-security.png',
-    imageAlt: 'Security and facilities uniforms illustration',
+    image: 'assets/images/security-facilities-team.webp',
+    imageAlt: 'Security and facilities team in coordinated professional uniforms',
+    url: 'solutions/security-facility-uniforms.html',
     title: 'Professional uniforms for teams who represent trust and readiness.',
     lead: 'Security and facility teams are often the first people visitors see. Their uniform should communicate confidence, discipline and reliability while remaining practical through extended duties.',
     tags: ['Professional', 'Functional', 'Weather-ready'],
@@ -73,8 +79,9 @@ const solutionData = {
   },
   fuel: {
     kicker: 'Petrol pumps & fuel retail',
-    image: 'assets/images/solution-fuel.png',
-    imageAlt: 'Fuel retail uniforms illustration',
+    image: 'assets/images/fuel-retail-team.webp',
+    imageAlt: 'Fuel station service team in coordinated branded uniforms',
+    url: 'solutions/fuel-retail-uniforms.html',
     title: 'Visible, brand-aligned uniforms for forecourt and service teams.',
     lead: 'Fuel-retail teams work outdoors, interact continuously with customers and represent the brand at every transaction. Their uniforms need clear identification, ease of movement and reliable everyday performance.',
     tags: ['Brand visibility', 'Outdoor comfort', 'Functional'],
@@ -85,8 +92,9 @@ const solutionData = {
   },
   custom: {
     kicker: 'Custom apparel & specialized requirements',
-    image: 'assets/images/solution-custom.png',
-    imageAlt: 'Custom branded apparel illustration',
+    image: 'assets/images/custom-branded-apparel-team.webp',
+    imageAlt: 'Custom branded apparel consultation and showroom collaboration',
+    url: 'solutions/custom-branded-apparel.html',
     title: 'When your requirement does not fit a standard category, we build around it.',
     lead: 'From events and promotional apparel to specialized role-based garments, Joy Uniforms can develop customized solutions based on your brief, quantity, application and budget.',
     tags: ['Flexible', 'Branded', 'Made to brief'],
@@ -103,6 +111,34 @@ const requirementSelect = document.getElementById('requirement');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.getElementById('primary-nav');
 let lastFocusedElement = null;
+
+const solutionOrder = ['school','healthcare','industrial','corporate','hospitality','security','fuel','custom'];
+
+function renderSolutionShowcases() {
+  const showcaseList = document.getElementById('solution-showcase-list');
+  if (!showcaseList) return;
+  showcaseList.innerHTML = solutionOrder.map((key, index) => {
+    const item = solutionData[key];
+    return `
+      <article class="showcase-card reveal" id="sector-${key}">
+        <a class="showcase-card-media" href="${item.url}" aria-label="Open ${item.kicker} page">
+          <img src="${item.image}" alt="${item.imageAlt}" width="1448" height="1086" loading="lazy">
+        </a>
+        <div class="showcase-card-copy">
+          <span class="showcase-code">${String(index + 1).padStart(2, '0')} • ${item.kicker}</span>
+          <h3><a href="${item.url}">${item.title}</a></h3>
+          <p>${item.lead}</p>
+          <div class="showcase-tags">${item.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
+          <div class="showcase-actions compact-actions">
+            <a class="button button-small" href="${item.url}">Open category page</a>
+            <button class="button button-ghost-dark button-small" type="button" data-open-solution="${key}">Quick view</button>
+          </div>
+        </div>
+      </article>`;
+  }).join('');
+}
+
+renderSolutionShowcases();
 
 function openSolution(key, updateHash = true) {
   const item = solutionData[key];
@@ -231,7 +267,7 @@ form.addEventListener('submit', async (event) => {
   button.disabled = true;
   button.innerHTML = '<span>Sending…</span>';
   try {
-    const response = await fetch('https://formsubmit.co/ajax/contact@joyuniformsllp.com', {
+    const response = await fetch('https://formsubmit.co/ajax/info@joyuniforms.co.in', {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
       body: new FormData(form)
@@ -242,7 +278,7 @@ form.addEventListener('submit', async (event) => {
     formStatus.textContent = 'Thank you. Your enquiry has been sent to Joy Uniforms.';
   } catch (error) {
     formStatus.classList.add('error');
-    formStatus.innerHTML = 'The form service could not be reached. Please email <a href="mailto:contact@joyuniformsllp.com">contact@joyuniformsllp.com</a> or use WhatsApp.';
+    formStatus.innerHTML = 'The form service could not be reached. Please email <a href="mailto:info@joyuniforms.co.in">info@joyuniforms.co.in</a> or use WhatsApp.';
   } finally {
     button.disabled = false;
     button.innerHTML = original;

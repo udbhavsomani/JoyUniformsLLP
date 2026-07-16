@@ -1,46 +1,60 @@
-# Joy Uniforms LLP — Frontend Website
+# Joy Uniforms LLP — Deployment-Ready Frontend Website
 
-A responsive, single-page, multi-view B2B website built with plain HTML, CSS and JavaScript. No backend or build step is required.
+A responsive B2B website built with plain HTML, CSS and JavaScript. No backend or build step is required.
 
-## Files
+## What is included
+
+- Premium single-page homepage with multi-view solution drawers
+- Eight SEO-focused solution landing pages in `solutions/`
+- Optimized WebP imagery and dedicated social-sharing image
+- Responsive design, mobile navigation and accessible controls
+- FormSubmit-powered enquiry form, WhatsApp, call and email actions
+- Organization, FAQ, Service and Breadcrumb structured data
+- Sitemap, robots file, web app icons and 404 page
+- Apache `.htaccess`, Netlify `_headers` and `netlify.toml` deployment configuration
+- Draft Privacy Policy and Terms of Use
+
+## Main files
 
 - `index.html` — main website
-- `styles.css` — responsive design and brand styling
-- `script.js` — mobile navigation, product detail drawer, enquiry form, animations
-- `privacy.html` and `terms.html` — practical draft policy pages; obtain legal review before publication
-- `assets/images/` — optimized local logo and website imagery
-- `robots.txt`, `sitemap.xml`, `site.webmanifest` — basic SEO and PWA metadata
-- `website-audit-and-content-decisions.md` — page-by-page audit and content strategy
+- `solutions/*.html` — sector-specific SEO landing pages
+- `styles.css` — all shared styling
+- `script.js` — drawers, mobile menu, form handling and dynamic solution sections
+- `assets/images/` — logo, optimized WebP category graphics, favicon and OG image
+- `404.html` — branded error page
+- `.htaccess` — Apache/cPanel caching, compression and security headers
+- `_headers` and `netlify.toml` — Netlify/Cloudflare-style static hosting configuration
 
 ## Run locally
-
-Open `index.html` directly, or run a local server from this folder:
 
 ```bash
 python -m http.server 8080
 ```
 
-Then open `http://localhost:8080`.
+Open `http://localhost:8080`.
 
-## Enquiry form
+## Enquiry form activation
 
-The form uses the free FormSubmit AJAX endpoint and sends enquiries to:
+The website submits through FormSubmit to `info@joyuniforms.co.in`. After the first live test submission, approve the one-time verification email from FormSubmit. Until that is done, submissions will not be delivered.
 
-`contact@joyuniformsllp.com`
+## cPanel / shared hosting deployment
 
-FormSubmit requires a one-time email confirmation the first time the form is used. Submit one test enquiry after deployment and approve the verification email. If the service cannot be reached, the website displays email and WhatsApp alternatives.
+1. Back up the current website.
+2. Upload the contents of this folder—not the outer folder itself—to `public_html`.
+3. Ensure hidden files are included so `.htaccess` is uploaded.
+4. Test the homepage, all eight solution pages, the contact form, WhatsApp and Google Maps links.
+5. Submit `https://www.joyuniforms.co.in/sitemap.xml` in Google Search Console.
+6. Test one form enquiry and approve the FormSubmit verification email.
 
-To change the recipient, update both occurrences of this address in `index.html` and the endpoint in `script.js`.
+## Netlify deployment
 
-## Before going live — confirm these items
+Drag the full folder into Netlify Drop, or connect it to a repository. `netlify.toml` and `_headers` are already included.
 
-1. Confirm the preferred public domain: the requested site is `joyuniformsllp.com`, while LinkedIn currently lists `joyuniforms.co.in`.
-2. Confirm the primary phone number and email. The build uses `+91 98186 62508` and `contact@joyuniformsllp.com`, which appear in the live site header.
-3. Confirm the exact PIN codes and business hours for the industrial unit and shop. The website deliberately omits uncertain PIN codes and hours.
-4. Replace the current limited product image with a professional photo library of the actual factory, team, fabrics, embroidery, quality checks and sector-wise uniforms.
-5. Review `privacy.html` and `terms.html` with legal counsel.
-6. Add Google Analytics or Search Console only after deciding the cookie-consent approach.
+## Before publication — confirm
 
-## Deployment
-
-This folder can be uploaded directly to shared hosting/cPanel, Netlify, Cloudflare Pages, GitHub Pages or any static host. For the existing domain, upload the contents of this folder to the website document root, usually `public_html`.
+- Preferred primary domain: `joyuniforms.co.in` or `joyuniforms.co.in`
+- Primary phone and email
+- Exact PIN codes and business hours
+- Legal review of Privacy Policy and Terms of Use
+- Whether Google Analytics/Search Console tags should be added
+- Replace illustrations with approved real photography over time where available

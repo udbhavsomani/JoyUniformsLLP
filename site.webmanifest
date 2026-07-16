@@ -1,1 +1,20 @@
-{"name":"Joy Uniforms LLP","short_name":"Joy Uniforms","start_url":"./","display":"standalone","background_color":"#fffdf9","theme_color":"#14233c","icons":[{"src":"assets/images/joy-logo.png","sizes":"405x252","type":"image/png"}]}
+{
+  "name": "Joy Uniforms LLP",
+  "short_name": "Joy Uniforms",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fffdf9",
+  "theme_color": "#14233c",
+  "icons": [
+    {
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.joyuniformsllp.com/sitemap.xml
+
+Sitemap: https://www.joyuniforms.co.in/sitemap.xml
