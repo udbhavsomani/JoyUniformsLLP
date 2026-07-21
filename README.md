@@ -58,3 +58,11 @@ Drag the full folder into Netlify Drop, or connect it to a repository. `netlify.
 - Legal review of Privacy Policy and Terms of Use
 - Whether Google Analytics/Search Console tags should be added
 - Replace illustrations with approved real photography over time where available
+
+## Client logo section
+
+The homepage includes a client showcase grouped into:
+- Educational & Healthcare Institutions
+- Corporate Clients
+
+Optimized logo assets are stored in `assets/client-logos/`.
