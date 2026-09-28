@@ -1,0 +1,28 @@
+# Operating system files
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Local editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*service-account*.json
+*credentials*.json
+
+# Dependencies and generated output (if used)
+node_modules/
+.cache/
+_site/
+_site-demo/
+
+# Logs
+*.log

@@ -93,7 +93,7 @@ The current school-uniform page is the strongest part of the existing site becau
 
 ### New direction
 
-- Use one primary contact path throughout the build: `+91 98186 62508` and `contact@joyuniformsllp.com`, pending final confirmation.
+- Use one primary contact path throughout the build: `+91 98186 62508` and `info@joyuniforms.co.in`, pending final confirmation.
 - Add call, email, WhatsApp and map links.
 - Add a structured B2B enquiry form with sector, quantity and project details.
 - Use FormSubmit as a free frontend-only form service.
@@ -103,7 +103,7 @@ The current school-uniform page is the strongest part of the existing site becau
 - Whether the shop’s landline should remain public.
 - Correct PIN codes for both addresses.
 - Shop and manufacturing-unit business hours.
-- Whether `contact@joyuniformsllp.com` or another email should be the single enquiry inbox.
+- Whether `info@joyuniforms.co.in` or another email should be the single enquiry inbox.
 
 ## 6. Footer and site-wide experience
 
@@ -147,7 +147,7 @@ Use landscape images in 3:2 and 16:9 formats plus square category crops. Rename 
 
 ## 9. Domain and brand consistency issue
 
-The requested live website is `www.joyuniformsllp.com`, while the current LinkedIn profile lists `www.joyuniforms.co.in`. Select one primary domain, redirect the other to it, and use the same URL across LinkedIn, Google Business Profile, email signatures, brochures and social creatives.
+The requested live website is `www.joyuniforms.co.in`, while the current LinkedIn profile lists `www.joyuniforms.co.in`. Select one primary domain, redirect the other to it, and use the same URL across LinkedIn, Google Business Profile, email signatures, brochures and social creatives.
 
 ## 10. SEO priorities after launch
 
